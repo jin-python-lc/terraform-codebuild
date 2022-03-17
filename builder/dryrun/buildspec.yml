@@ -8,7 +8,10 @@ phases:
        - echo $CODEBUILD_BUILD_ID
        - echo $CODEBUILD_WEBHOOK_TRIGGER
        - echo $CODEBUILD_SOURCE_VERSION
-       - source ./builder/dryrun/builder.sh ${CODEBUILD_BUILD_ID}
+       #- source ./builder/dryrun/builder.sh ${CODEBUILD_BUILD_ID}
+       - job_name=(${CODEBUILD_BUILD_ID//:/ })
+       - DEPLOY_ENV=${split_build_name[1]}
+       - TFVARS_PATH=./config/${DEPLOY_ENV}/ap-northeast-1.tfvars
        - wget -q https://releases.hashicorp.com/terraform/0.14.9/terraform_0.14.9_linux_amd64.zip
        - unzip terraform_0.14.9_linux_amd64.zip
        - mv terraform /bin
