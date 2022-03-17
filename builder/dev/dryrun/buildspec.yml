@@ -2,14 +2,20 @@ version: 0.2
 
 phases:
   install:
-    commands:
-       - echo install phases
-  pre_build:
     on-failure: ABORT | CONTINUE
     commands:
+       - echo install phases
        - echo $CODEBUILD_INITIATOR
        - echo $CODEBUILD_BUILD_ID
        - echo $CODEBUILD_WEBHOOK_TRIGGER
        - echo $CODEBUILD_SOURCE_VERSION
        - pwd
        - sh ./builder/dev/dryrun/builder.sh ${CODEBUILD_BUILD_ID}
+       - wget -q https://releases.hashicorp.com/terraform/0.14.9/terraform_0.14.9_linux_amd64.zip
+       - unzip terraform_0.14.9_linux_amd64.zip
+       - mv terraform /bin
+       - terraform init -backend-config=./config/${deploy_env}/ap-northeast-1.backend
+  pre_build:
+    on-failure: ABORT | CONTINUE
+    commands:
+       - echo pre_build phases
