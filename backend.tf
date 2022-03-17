@@ -8,8 +8,5 @@ terraform {
   }
 
   backend "s3" {
-    #bucket = "trackmarket-jenkins"
-    #key = "ap-northeast-1.tfstate"
-    #region = "ap-northeast-1"
   }
 }
