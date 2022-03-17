@@ -7,3 +7,4 @@ phases:
        - echo $CODEBUILD_BUILD_ID
        - echo $CODEBUILD_SOURCE_VERSION
        - pwd
+       - sh ./builder/dev/dryrun/builder.sh ${CODEBUILD_BUILD_ID}
