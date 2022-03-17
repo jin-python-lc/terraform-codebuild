@@ -4,6 +4,6 @@ phases:
     commands:
        - echo $CODEBUILD_INITIATOR
        - echo $CODEBUILD_BUILD_ID
-       - echo $CODEBUILD_SOURCE_VERSION
+       - echo $CODEBUILD_WEBHOOK_TRIGGER#branch/
        - pwd
        - sh ./builder/dev/dryrun/builder.sh ${CODEBUILD_BUILD_ID}

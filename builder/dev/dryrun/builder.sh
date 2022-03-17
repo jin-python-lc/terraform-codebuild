@@ -1,11 +1,9 @@
 #!/bin/sh
-
-echo ${CODEBUILD_BUILD_ID}
-
 job_name=(${CODEBUILD_BUILD_ID//:/ })
-project_name=(${job_name//-/ }[0])
-deploy_env=(${job_name//-/ }[3])
+split_build_name=(${job_name//-/ })
+project_name=${split_build_name[0]}
+deploy_env=${split_build_name[1]}
 
 echo ${job_name}
 echo ${project_name}
-echo ${deploy_env[1]}
+echo ${deploy_env}
