@@ -8,4 +8,5 @@ echo ${job_name}
 echo ${project_name}
 echo ${deploy_env}
 
-export DEPLOY_ENV=deploy_env
+DEPLOY_ENV=deploy_env
+export DEPLOY_ENV
