@@ -14,5 +14,8 @@ terraform-codebuild
 - terraform-prd         : main環境向けreleaseプロジェクト
 
 ## buildspec.yml
-- [builder/build/buildspec.yml](https://github.com/jin-python-lc/terraform-codebuild/blob/main/builder/build/buildspec.yml) : releaseプロジェクト用yml
 - [builder/dryrun/buildspec.yml](https://github.com/jin-python-lc/terraform-codebuild/blob/main/builder/dryrun/buildspec.yml) : releaseプロジェクト用yml
+- [builder/build/buildspec.yml](https://github.com/jin-python-lc/terraform-codebuild/blob/main/builder/build/buildspec.yml) : releaseプロジェクト用yml
+
+## terraform
+terraform実行時はassumeroleを使用
