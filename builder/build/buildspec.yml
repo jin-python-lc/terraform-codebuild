@@ -13,8 +13,6 @@ phases:
        - unzip terraform_0.14.9_linux_amd64.zip
        - mv terraform /bin
        - terraform init -backend-config=./config/${DEPLOY_ENV}/ap-northeast-1.backend
-       - echo $DEPLOY_ENV
-       - echo $TFVARS_PATH
   pre_build:
     on-failure: ABORT | CONTINUE
     commands:
