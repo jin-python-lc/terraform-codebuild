@@ -22,6 +22,6 @@ phases:
     on-failure: ABORT | CONTINUE
     commands:
        - echo build phases
-       - source ./builder/dryrun/releasecheck.sh
+       - source ./builder/build/releasecheck.sh
        - if [ 1 -eq $BOOLEAN ]; then terraform apply plan.out; else; echo Aborted; fi
 
