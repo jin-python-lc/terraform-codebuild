@@ -2,7 +2,6 @@ version: 0.2
 phases:
   pre_build:
     commands:
-       - echo !!!!!!!!!!!!!!!!!!!!!! TERRAFORM PLAN staging!!!!!!!!!!!!!!!!!!!!!!
        - echo $CODEBUILD_INITIATOR
        - echo $CODEBUILD_BUILD_ID
        - echo $CODEBUILD_SOURCE_VERSION
