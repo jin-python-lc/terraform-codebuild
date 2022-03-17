@@ -1,0 +1,6 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+       - cd src
+       - echo !!!!!!!!!!!!!!!!!!!!!! TERRAFORM PLAN staging!!!!!!!!!!!!!!!!!!!!!!
