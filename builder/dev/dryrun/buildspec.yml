@@ -5,4 +5,5 @@ phases:
        - echo !!!!!!!!!!!!!!!!!!!!!! TERRAFORM PLAN staging!!!!!!!!!!!!!!!!!!!!!!
        - echo $CODEBUILD_INITIATOR
        - echo $CODEBUILD_BUILD_ID
-       - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+       - echo $CODEBUILD_SOURCE_VERSION
+       - pwd
