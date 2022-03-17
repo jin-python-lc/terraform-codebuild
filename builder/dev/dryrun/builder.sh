@@ -7,3 +7,5 @@ deploy_env=${split_build_name[1]}
 echo ${job_name}
 echo ${project_name}
 echo ${deploy_env}
+
+export deploy_env=${deploy_env}
