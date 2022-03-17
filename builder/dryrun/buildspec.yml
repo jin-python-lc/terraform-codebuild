@@ -10,7 +10,7 @@ phases:
        - echo $CODEBUILD_WEBHOOK_TRIGGER
        - echo $CODEBUILD_SOURCE_VERSION
        - pwd
-       - source ./builder/dev/dryrun/builder.sh ${CODEBUILD_BUILD_ID}
+       - source ./builder/dryrun/builder.sh ${CODEBUILD_BUILD_ID}
        - wget -q https://releases.hashicorp.com/terraform/0.14.9/terraform_0.14.9_linux_amd64.zip
        - unzip terraform_0.14.9_linux_amd64.zip
        - mv terraform /bin
@@ -21,10 +21,5 @@ phases:
     on-failure: ABORT | CONTINUE
     commands:
        - echo pre_build phases
-       - terraform plan ${DESTROY_MODE} -var-file=${TFVARS_PATH} -out plan.out
-  build:
-    on-failure: ABORT | CONTINUE
-    commands:
-       - echo build phases
-       - terraform apply plan.out
+       - terraform plan ${DESTROY_MODE} -var-file=${TFVARS_PATH}
 
