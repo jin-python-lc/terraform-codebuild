@@ -12,12 +12,12 @@ phases:
        - wget -q https://releases.hashicorp.com/terraform/0.14.9/terraform_0.14.9_linux_amd64.zip
        - unzip terraform_0.14.9_linux_amd64.zip
        - mv terraform /bin
-       - terraform init -backend-config=./config/${DEPLOY_ENV}/ap-northeast-1.backend
+       - terraform init -backend-config=./config/${DEPLOY_ENV}/ap-northeast-1.backend -no-color
   pre_build:
     on-failure: ABORT | CONTINUE
     commands:
        - echo pre_build phases
-       - terraform plan ${DESTROY_MODE} -var-file=${TFVARS_PATH}
+       - terraform plan ${DESTROY_MODE} -var-file=${TFVARS_PATH} -no-color -out plan.out
   build:
     on-failure: ABORT | CONTINUE
     commands:
