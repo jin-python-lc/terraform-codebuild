@@ -212,8 +212,12 @@ project = {
 }
 
 iam_users = {
+    #(for_each)
+    #     = each.value
     test1 = {
+        #   = each.value.key
         key = "test1"
+        #   = each.value.name
         name = "test1@terraform"
     }
     test2 = {
