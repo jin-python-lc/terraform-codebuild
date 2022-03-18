@@ -231,7 +231,7 @@ iam_users = {
 }
 ```
 
-これでも可
+以下も可
 ```tf:iam_user.tf
 resource "aws_iam_user" "iam_user" {
     for_each = var.iam_users
