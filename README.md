@@ -13,6 +13,21 @@
 - terraform-prd-dryrun  : main環境向けdryrunプロジェクト
 - terraform-prd         : main環境向けreleaseプロジェクト
 
+## Codebuild環境
+<img width="1562" alt="image" src="https://user-images.githubusercontent.com/85344890/158951066-121eb740-e772-4a2e-b54c-5e07b3b0822c.png">
+
+## Dryrunプロジェクトのwebhookアクション
+### terraform-dev-dryrun
+<img width="725" alt="image" src="https://user-images.githubusercontent.com/85344890/158950358-972850b3-b483-4184-97e4-6b8a8b425426.png">
+
+### terraform-stg-dryrun 
+<img width="727" alt="image" src="https://user-images.githubusercontent.com/85344890/158950544-1fd1baef-efd0-4ee3-a578-099f11640b47.png">
+
+### terraform-prd-dryrun
+<img width="726" alt="image" src="https://user-images.githubusercontent.com/85344890/158951479-ceb78bdd-cc73-4d32-93ad-7be5807f3137.png">
+
+
+
 ## ディレクトリ構造
 <img width="212" alt="スクリーンショット 2022-03-18 14 39 14" src="https://user-images.githubusercontent.com/85344890/158946097-8c3e8d9c-fe79-415f-8879-081bc8ae67cb.png">
 
