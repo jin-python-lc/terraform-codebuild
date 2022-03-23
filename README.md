@@ -13,7 +13,7 @@
 - terraform-prd-dryrun  : main環境向けdryrunプロジェクト
 - terraform-prd         : main環境向けreleaseプロジェクト
 
-## フロー
+## 今回構築するCICD
 ![Slide3](https://user-images.githubusercontent.com/85344890/159631744-31352b8d-ce93-4a48-987e-07593efb0441.jpg)
 
 
