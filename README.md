@@ -1,4 +1,4 @@
-# 環境が複数ある場合のCodebuildを用いたTerraformのCICD環境
+# 複数環境向けのTerraformのCICD環境をCodebuildで構築
 
 ## 環境
 - develop：開発環境
