@@ -295,7 +295,3 @@ iam_users = {
 }
 ```
 
-## hotfixが必要となった場合
-develop, staging, productionブランチに対するPRがトリガーとなるため影響なし
-![Slide4](https://user-images.githubusercontent.com/85344890/159638591-3fb7c683-7ea3-414e-8988-c9b8f79aedbf.jpg)
-
