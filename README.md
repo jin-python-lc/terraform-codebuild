@@ -1,4 +1,4 @@
-# terraform×codebuild　CI/CD
+# 環境が複数ある場合のCodebuildを用いたTerraformのCICD環境
 
 ## 環境
 - develop：開発環境
