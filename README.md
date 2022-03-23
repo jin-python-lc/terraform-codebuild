@@ -31,6 +31,28 @@
 ## ディレクトリ構造
 <img width="212" alt="スクリーンショット 2022-03-18 14 39 14" src="https://user-images.githubusercontent.com/85344890/158946097-8c3e8d9c-fe79-415f-8879-081bc8ae67cb.png">
 
+```
+.
+├── backend.tf
+├── builder
+│   ├── build.yml
+│   └── dryrun.yml
+├── config
+│   ├── dev
+│   │   ├── ap-northeast-1.backend
+│   │   └── ap-northeast-1.tfvars
+│   ├── prd
+│   │   ├── ap-northeast-1.backend
+│   │   └── ap-northeast-1.tfvars
+│   └── stg
+│       ├── ap-northeast-1.backend
+│       └── ap-northeast-1.tfvars
+├── iam_user.tf
+├── locals.tf
+├── provider.tf
+└── variable.tf
+```
+
 
 ## buildspec.yml
 - [builder/dryrun.yml](https://github.com/jin-python-lc/terraform-codebuild/blob/main/builder/dryrun.yml) : dryrunプロジェクト用yml
