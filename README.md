@@ -141,14 +141,15 @@ key = "terraform/develop/ap-northeast-1.tfstate"
 region = "ap-northeast-1"
 ```
 
-terraform実行時はassumeroleを使用
+terraform実行権限はcodebuildのロールで管理
+マルチアカウントで環境を分ける場合はassumeroleを使用
 
 ```tf:provider.tf
 provider "aws" {
     region = "ap-northeast-1"
-    assume_role {
-        role_arn = "arn:aws:iam::${var.aws.account_id}:role/StsAdminRole"
-    }
+    #assume_role {
+    #    role_arn = "arn:aws:iam::${var.aws.account_id}:role/StsAdminRole"
+    #}
 }
 ```
 
