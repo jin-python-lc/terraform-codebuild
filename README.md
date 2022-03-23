@@ -1,17 +1,21 @@
 # 複数環境向けのTerraformのCICD環境をCodebuildで構築
 
 ## 環境
+以下の環境をterraformで管理していると仮定する
 - develop：開発環境
 - staging：試験環境
 - main：本番環境
 
 ## Codebuildビルドプロジェクト
-- terraform-dev-dryrun  : develop環境向けdryrunプロジェクト
-- terraform-dev         : develop環境向けreleaseプロジェクト
-- terraform-stg-dryrun  : staging環境向けdryrunプロジェクト
-- terraform-stg         : staging環境向けreleaseプロジェクト     
-- terraform-prd-dryrun  : main環境向けdryrunプロジェクト
-- terraform-prd         : main環境向けreleaseプロジェクト
+develop環境向け
+- terraform-dev-dryrun  : dryrunプロジェクト
+- terraform-dev         : releaseプロジェクト
+staging環境向け
+- terraform-stg-dryrun  : dryrunプロジェクト
+- terraform-stg         : releaseプロジェクト   
+main環境向け  
+- terraform-prd-dryrun  : dryrunプロジェクト
+- terraform-prd         : releaseプロジェクト
 
 ## 今回構築するCICD
 ![Slide3](https://user-images.githubusercontent.com/85344890/159631744-31352b8d-ce93-4a48-987e-07593efb0441.jpg)
