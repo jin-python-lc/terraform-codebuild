@@ -14,7 +14,7 @@
 - terraform-prd         : main環境向けreleaseプロジェクト
 
 ## フロー
-![Slide3](https://user-images.githubusercontent.com/85344890/159631635-16050a2e-149b-4901-bb0d-41dff643b65d.jpg)
+![Slide3](https://user-images.githubusercontent.com/85344890/159631744-31352b8d-ce93-4a48-987e-07593efb0441.jpg)
 
 
 ## Codebuild環境
