@@ -10,9 +10,11 @@
 develop環境向け
 - terraform-dev-dryrun  : dryrunプロジェクト
 - terraform-dev         : releaseプロジェクト　　
+
 staging環境向け
 - terraform-stg-dryrun  : dryrunプロジェクト
-- terraform-stg         : releaseプロジェクト　　  
+- terraform-stg         : releaseプロジェクト　
+　  
 main環境向け  
 - terraform-prd-dryrun  : dryrunプロジェクト
 - terraform-prd         : releaseプロジェクト
