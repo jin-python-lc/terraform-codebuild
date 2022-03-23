@@ -141,7 +141,7 @@ key = "terraform/develop/ap-northeast-1.tfstate"
 region = "ap-northeast-1"
 ```
 
-terraform実行権限はcodebuildのロールで管理
+terraform実行権限はcodebuildのロールで管理  
 マルチアカウントで環境を分ける場合はassumeroleを使用
 
 ```tf:provider.tf
