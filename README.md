@@ -13,6 +13,10 @@
 - terraform-prd-dryrun  : main環境向けdryrunプロジェクト
 - terraform-prd         : main環境向けreleaseプロジェクト
 
+## フロー
+![Slide3](https://user-images.githubusercontent.com/85344890/159631503-8e0a7de9-54d0-4cce-b7f4-2775243fedca.jpg)
+
+
 ## Codebuild環境
 <img width="1562" alt="image" src="https://user-images.githubusercontent.com/85344890/158951066-121eb740-e772-4a2e-b54c-5e07b3b0822c.png">
 
