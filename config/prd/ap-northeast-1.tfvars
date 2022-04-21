@@ -24,4 +24,8 @@ iam_users = {
         key = "test3"
         name = "test3@terraform"
     }
+    test4 = {
+        key = "test4"
+        name = "test4@terraform"
+    }
 }
