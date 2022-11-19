@@ -20,5 +20,15 @@ phases:
     on-failure: ABORT | CONTINUE
     commands:
        - echo pre_build phases
-       - terraform plan ${DESTROY_MODE} -var-file=${TFVARS_PATH} -no-color
-
+       - terraform fmt
+       - #terraform plan ${DESTROY_MODE} -var-file=${TFVARS_PATH} -no-color
+  build:
+    on-failure: ABORT
+    commands:
+       - ls -la
+       - apt install git
+       - git branch -a
+       - touch a.txt
+       - git add .
+       - git commit -m 'mod'
+       - git log
