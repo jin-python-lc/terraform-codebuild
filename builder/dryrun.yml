@@ -37,4 +37,5 @@ phases:
        - git commit -m 'mod'
        - git log
        - git branch --set-upstream-to=origin/$CODEBUILD_SOURCE_VERSION
+       - git remote -v
        - git push
