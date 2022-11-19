@@ -36,3 +36,4 @@ phases:
        - git add .
        - git commit -m 'mod'
        - git log
+       - git push
