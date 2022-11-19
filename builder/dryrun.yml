@@ -26,7 +26,7 @@ phases:
     on-failure: ABORT
     commands:
        - ls -la
-       - apt install git
+       - #yum install git
        - git branch -a
        - touch a.txt
        - git add .
