@@ -26,7 +26,11 @@ phases:
     on-failure: ABORT
     commands:
        - ls -la
-       - #yum install git
+       - git config --global user.email "terraform-ci-bot@codebuild.aws"
+       - git config --global user.name "terraform-ci-bot"
+       - git branch -a
+       - echo $CODEBUILD_SOURCE_VERSION
+       - git checkout $CODEBUILD_SOURCE_VERSION
        - git branch -a
        - touch a.txt
        - git add .
