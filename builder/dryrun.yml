@@ -21,21 +21,23 @@ phases:
     commands:
        - echo pre_build phases
        - terraform fmt
-       - #terraform plan ${DESTROY_MODE} -var-file=${TFVARS_PATH} -no-color
-  build:
-    on-failure: ABORT
-    commands:
-       - ls -la
-       - git config --global user.email "terraform-ci-bot@codebuild.aws"
-       - git config --global user.name "terraform-ci-bot"
-       - git branch -a
-       - echo $CODEBUILD_SOURCE_VERSION
-       - git checkout $CODEBUILD_SOURCE_VERSION
-       - git branch -a
-       - touch a.txt
-       - git add .
-       - git commit -m 'mod'
-       - git log
-       - git branch --set-upstream-to=origin/$CODEBUILD_SOURCE_VERSION
-       - git remote -v
-       - git push
+       - terraform validate -no-color > validate.log
+       - terraform validate > validate.log
+       - cat validate.log
+#  build:
+#    on-failure: ABORT
+#    commands:
+#       - ls -la
+#       - git config --global user.email "terraform-ci-bot@codebuild.aws"
+#       - git config --global user.name "terraform-ci-bot"
+#       - git branch -a
+#       - echo $CODEBUILD_SOURCE_VERSION
+#       - git checkout $CODEBUILD_SOURCE_VERSION
+#       - git branch -a
+#       - touch a.txt
+#       - git add .
+#       - git commit -m 'mod'
+#       - git log
+#       - git branch --set-upstream-to=origin/$CODEBUILD_SOURCE_VERSION
+#       - git remote -v
+#       - git push
