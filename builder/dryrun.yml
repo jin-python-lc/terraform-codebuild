@@ -17,7 +17,7 @@ phases:
        - mv terraform /bin
        - terraform init -backend-config=./config/${DEPLOY_ENV}/ap-northeast-1.backend -no-color
   pre_build:
-    on-failure: ABORT | CONTINUE
+    on-failure: CONTINUE
     commands:
        - echo pre_build phases
        - terraform fmt
